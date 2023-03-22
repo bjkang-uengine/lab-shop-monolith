@@ -1,12 +1,12 @@
 package labshopmonolith.external;
 
 import java.util.Date;
+import java.util.List;
+import javax.persistence.*;
 import lombok.Data;
 
 @Data
-public class Inventory {
+public class DecreaseStockCommand {
 
-    private Long id;
-    private Long stock;
     private Integer qty;
 }

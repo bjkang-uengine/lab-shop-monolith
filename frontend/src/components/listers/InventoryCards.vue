@@ -69,6 +69,7 @@
             
             me.newValue = {
                 'stock': 0,
+                'qty': 0,
             }
         },
         methods:{

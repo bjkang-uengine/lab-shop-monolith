@@ -17,6 +17,8 @@ public class Inventory {
 
     private Long stock;
 
+    private Integer qty;
+
     @PostPersist
     public void onPostPersist() {}
 
@@ -27,5 +29,5 @@ public class Inventory {
         return inventoryRepository;
     }
 
-    public void decreaseStock() {}
+    public void decreaseStock(DecreaseStockCommand decreaseStockCommand) {}
 }
