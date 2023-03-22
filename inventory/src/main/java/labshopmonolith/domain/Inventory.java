@@ -27,5 +27,5 @@ public class Inventory {
         return inventoryRepository;
     }
 
-    public void inventoryAggregate() {}
+    public void decreaseStock() {}
 }

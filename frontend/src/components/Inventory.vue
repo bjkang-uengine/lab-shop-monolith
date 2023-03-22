@@ -61,9 +61,9 @@
                     v-if="!editMode"
                     color="deep-purple lighten-2"
                     text
-                    @click="inventoryAggregate"
+                    @click="decreaseStock"
             >
-                InventoryAggregate
+                DecreaseStock
             </v-btn>
         </v-card-actions>
 
@@ -196,7 +196,7 @@
             change(){
                 this.$emit('input', this.value);
             },
-            async inventoryAggregate() {
+            async decreaseStock() {
                 try {
                     if(!this.offline) {
                         var temp = await axios.put(axios.fixUrl(this.value._links['inventoryaggregate'].href))

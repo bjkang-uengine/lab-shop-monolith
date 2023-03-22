@@ -13,5 +13,5 @@ public interface InventoryService {
         method = RequestMethod.PUT,
         path = "/inventories/{id}/inventoryaggregate"
     )
-    public void inventoryAggregate(@PathVariable("id") Long id);
+    public void decreaseStock(@PathVariable("id") Long id);
 }

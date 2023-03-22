@@ -23,19 +23,19 @@ public class InventoryController {
         method = RequestMethod.PUT,
         produces = "application/json;charset=UTF-8"
     )
-    public Inventory inventoryAggregate(
+    public Inventory decreaseStock(
         @PathVariable(value = "id") Long id,
         HttpServletRequest request,
         HttpServletResponse response
     ) throws Exception {
-        System.out.println("##### /inventory/inventoryAggregate  called #####");
+        System.out.println("##### /inventory/decreaseStock  called #####");
         Optional<Inventory> optionalInventory = inventoryRepository.findById(
             id
         );
 
         optionalInventory.orElseThrow(() -> new Exception("No Entity Found"));
         Inventory inventory = optionalInventory.get();
-        inventory.inventoryAggregate();
+        inventory.decreaseStock();
 
         inventoryRepository.save(inventory);
         return inventory;
