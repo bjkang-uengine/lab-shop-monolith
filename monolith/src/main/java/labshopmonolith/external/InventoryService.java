@@ -7,14 +7,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@FeignClient(name = "monolith", url = "${api.url.monolith}")
+@FeignClient(name = "inventory", url = "${api.url.inventory}")
 public interface InventoryService {
     @RequestMapping(
         method = RequestMethod.PUT,
-        path = "/inventories/{id}/decreasestock"
+        path = "/inventories/{id}/inventoryaggregate"
     )
-    public void decreaseStock(
-        @PathVariable("id") Long id,
-        @RequestBody DecreaseStockCommand decreaseStockCommand
-    );
+    public void inventoryAggregate(@PathVariable("id") Long id);
 }

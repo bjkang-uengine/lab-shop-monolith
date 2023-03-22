@@ -2,11 +2,10 @@
 
     <v-card outlined>
         <v-card-title>
-            DecreaseStock
+            InventoryAggregate
         </v-card-title>
 
         <v-card-text>
-            <Number label="Qty" v-model="value.qty" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -14,9 +13,9 @@
             <v-btn
                     color="deep-purple lighten-2"
                     text
-                    @click="decreaseStock"
+                    @click="inventoryAggregate"
             >
-                DecreaseStock
+                InventoryAggregate
             </v-btn>
             
             <v-btn
@@ -34,7 +33,7 @@
 <script>
    
     export default {
-        name: 'DecreaseStockCommand',
+        name: 'InventoryAggregateCommand',
         components:{},
         props: {},
         data: () => ({
@@ -42,13 +41,12 @@
             value: {},
         }),
         created() {
-            this.value.qty = 0;
         },
         watch: {
         },
         methods: {
-            decreaseStock() {
-                this.$emit('decreaseStock', this.value);
+            inventoryAggregate() {
+                this.$emit('inventoryAggregate', this.value);
             },
             close() {
                 this.$emit('closeDialog');
