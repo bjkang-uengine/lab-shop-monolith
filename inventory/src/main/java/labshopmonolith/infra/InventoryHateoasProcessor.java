@@ -14,11 +14,8 @@ public class InventoryHateoasProcessor
     public EntityModel<Inventory> process(EntityModel<Inventory> model) {
         model.add(
             Link
-                .of(
-                    model.getRequiredLink("self").getHref() +
-                    "/inventoryaggregate"
-                )
-                .withRel("inventoryaggregate")
+                .of(model.getRequiredLink("self").getHref() + "/decreasestock")
+                .withRel("decreasestock")
         );
 
         return model;

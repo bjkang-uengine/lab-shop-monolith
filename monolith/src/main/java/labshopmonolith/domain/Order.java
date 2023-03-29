@@ -40,13 +40,7 @@ public class Order {
     }
 
     @PrePersist
-    public void onPrePersist() {
-        // Get request from Order
-        //labshopmonolith.external.Order order =
-        //    Application.applicationContext.getBean(labshopmonolith.external.OrderService.class)
-        //    .getOrder(/** mapping value needed */);
-
-    }
+    public void onPrePersist() {}
 
     public static OrderRepository repository() {
         OrderRepository orderRepository = MonolithApplication.applicationContext.getBean(

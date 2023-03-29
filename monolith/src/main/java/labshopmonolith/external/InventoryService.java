@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface InventoryService {
     @RequestMapping(
         method = RequestMethod.PUT,
-        path = "/inventories/{id}/inventoryaggregate"
+        path = "/inventories/{id}/decreasestock"
     )
     public void decreaseStock(
         @PathVariable("id") Long id,

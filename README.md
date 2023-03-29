@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/storming/labshopmonolith22222
+www.msaez.io/#/courses/cna-full/80f10da0-c481-11ed-ad36-1bfd28bd1d42/monolith-2-misvc-2022
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -37,7 +37,7 @@ mvn spring-boot:run
 ```
 - inventory
 ```
- http :8088/inventories id="id" stock="stock" qty="qty" 
+ http :8088/inventories id="id" stock="stock" 
 ```
 
 

@@ -18,7 +18,6 @@
 
         <v-card-text>
             <Number label="Stock" v-model="value.stock" :editMode="editMode"/>
-            <Number label="Qty" v-model="value.qty" :editMode="editMode"/>
         </v-card-text>
 
         <v-card-actions>
@@ -207,7 +206,7 @@
             async decreaseStock(params) {
                 try {
                     if(!this.offline) {
-                        var temp = await axios.put(axios.fixUrl(this.value._links['inventoryaggregate'].href), params)
+                        var temp = await axios.put(axios.fixUrl(this.value._links['decreasestock'].href), params)
                         for(var k in temp.data) {
                             this.value[k]=temp.data[k];
                         }
